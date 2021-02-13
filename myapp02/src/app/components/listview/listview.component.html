@@ -1,0 +1,23 @@
+<section>
+    <h3 id="hdr">{{title}}</h3>
+    <h5>My TV Channels</h5>
+
+      <ul class="favs">
+        <li *ngFor=" let channel of channels"
+              [class.selected]="channel === selectedChannel"
+              (click)="onSelect(channel)">
+
+          <span class="badge">{{channel.id}}</span> {{channel.name}}
+        </li>
+      </ul>
+</section>
+
+<aside *ngIf="selectedChannel">
+<h4>{{selectedChannel.name}} Description:</h4>
+<div><label>id: </label>{{selectedChannel.id}}</div>
+
+<div>
+    <label>name: </label>
+    <input [(ngModel)]="selectedChannel.name" placeholder="name"/>
+</div>
+</aside>

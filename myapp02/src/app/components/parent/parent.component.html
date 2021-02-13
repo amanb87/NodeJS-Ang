@@ -1,0 +1,17 @@
+<section>
+    <h4>Parent</h4>
+    <p> Child to Parent Comm.</p>
+
+    <app-child01 (touch)="respond()" name="{{ name }}" [color]="color"> </app-child01>
+
+    <p>
+        Msg from child01:  {{response}}
+    </p>
+
+    <p>
+       Child01's current text color:  {{color}}
+    </p>
+    <app-child02 (colorChange)="changeColor($event)"></app-child02>
+
+
+</section>

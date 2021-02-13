@@ -1,0 +1,30 @@
+<div *ngIf="blog" class="row">
+    <div class="col-md-12">
+      <h2 *ngIf="blog._id">Blog Details</h2>
+      <h2 *ngIf="!blog._id">New Blog</h2>
+    </div>
+  </div>
+  <div *ngIf="blog" class="row">
+    <form class="col-md-12">
+      <div class="form-group">
+        <label for="blog-name">Headline / Topic</label>
+        <input class="form-control" name="blog-name" [(ngModel)]="blog.name" placeholder="Name"/>
+      </div>
+
+      <div class="form-group">
+        <label for="blog-content">Content</label>
+        <textarea class="form-control" name="blog-content" [(ngModel)]="blog.content" 
+                                       rows="8" cols="50"
+                                       placeholder="Enter your content."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="blog-email">Creater (email)</label>
+        <input class="form-control" name="blog-email" [(ngModel)]="blog.email" placeholder="Enter email"/>
+      </div>
+
+      <button class="btn btn-primary" *ngIf="!blog._id" (click)="createBlog(blog)">Create</button>
+      <button class="btn btn-info" *ngIf="blog._id" (click)="updateBlog(blog)">Update</button> &nbsp;
+      <button class="btn btn-danger" *ngIf="blog._id" (click)="deleteBlog(blog._id)">Delete</button>
+    </form>
+  </div>

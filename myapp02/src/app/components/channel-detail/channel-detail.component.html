@@ -1,0 +1,8 @@
+<aside *ngIf="channel">
+    <h2>{{channel.name}} Description:</h2>
+    <div><label>id: </label>{{channel.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="channel.name" placeholder="channel name"/>
+    </div>
+  </aside>

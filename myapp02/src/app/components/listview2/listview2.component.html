@@ -1,0 +1,16 @@
+<h2 >{{title}}</h2>
+<h5>My TV Channels</h5>
+<section>
+    <ul class="favs">
+        <li *ngFor=" let channel of channels"
+            [class.selected]="channel === selectedChannel"
+            (click)="onSelect(channel)">
+
+            <span class="badge">{{channel.id}}</span> {{channel.name}}
+        </li>
+    </ul>
+</section>
+
+<aside> Info Panel:
+    <app-channel-detail  [channel]="selectedChannel"></app-channel-detail>
+</aside>

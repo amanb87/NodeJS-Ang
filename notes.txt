@@ -1,0 +1,28 @@
+1. Connect() requires "next()" to chain functions for routes. Express doesn't require this explicitly.
+2. Use "res.end()" to close the route call.
+3. res.end() and res.write() can write to the DOM. 
+4. average requests per second(rps) on Mac - 700
+5. "cluster" module automatically replicates process across all cpu cores. Explicit binding with app object is not required.
+6. function overloading and constructor overloading is not supported in JS and TS
+7. In Typescript, always define the type explicitly.
+8. Type inference is used by Typescript interpreter to determine the type of variables during runtime. Thus "let z;" although technically is not encouraged in TS, the code will still execute without errors and dynamically assign "any" type to "z".
+9. nested functions in JS point to the global window object till ES5. From ES6, this is taken care by using arrow functions.
+10. "unpacking" in TS is referred to as "destructuring"
+11. the spread operator "..." is used for unpacking without explicitly defining the variables for R to L array assignments
+12. use "siege" package to run stress tests on API's/web apps
+13. "ng build --prod" will build the project for production. It will generate a "dist" folder with minified files.
+14. The "{{}}" denotes one-way binding. The "[]" does property binding. The "()" does event binding.
+15. The [(ngModel)] directive performs two way binding and uses the property & event binding to achieve this.
+16. "ng g c ./components/listview" creates the "components" folder(if its not created) and the "listview" component folder and files.
+17. Use the "!" symbol with ":" to declare variables.
+18. The "*" does DOM manipulation. Eg. *ngFor and *ngIf.
+19. Dependency injection is useful because housekeeping of the app is easily managed
+20. Services handles business logic such as communicating with a backend server. They can be exposed to the whole app or localised to specific components
+21. ElementRef is used to access DOM elements
+22. Child1 to Child2 communication should happen with the use of Services
+23. @Input works top to bottom
+24. A service is a singleton and shared amongst components
+25. 
+
+
+
